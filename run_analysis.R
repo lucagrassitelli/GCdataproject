@@ -41,6 +41,6 @@ col_mean_std$activities <- factor(col_mean_std$activities, levels=activities_nam
 new_df <- col_mean_std %>% group_by(subjects,activities) %>% summarise_all(mean)
 new_df <- as.data.frame(new_df)
 write.table(new_df, file = "final.txt", row.name=FALSE)
-
+new_df
 
 
